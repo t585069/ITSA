@@ -3,6 +3,8 @@
 #include <string.h>
 using namespace std;
 
+// å°ç¨»ç±³è¾²å ´
+
 int grid[101][101] = {0};
 bool vis[101][101] = {0};
 const int dir[4][2] = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
@@ -14,16 +16,16 @@ int DFS(int x, int y){
 	vis[x][y] = 1;
 	sum = grid[x][y];
 
-// ÀË¬d¥|­Ó¤è¦V 
+// æª¢æŸ¥å››å€‹æ–¹å‘ 
 	for(i=0; i<4; i++){
 		nx = x + dir[i][0];
 		ny = y + dir[i][1];
 		
-	// ¶W¥X½d³ò ©Î ¸I¨ì¨«¹D ©Î ¤w«ô³X¹L¡A«K¤£¦A©µ¦ù ´«¤è¦VÄ~Äò 
+	// è¶…å‡ºç¯„åœ æˆ– ç¢°åˆ°èµ°é“ æˆ– å·²æ‹œè¨ªéï¼Œä¾¿ä¸å†å»¶ä¼¸ æ›æ–¹å‘ç¹¼çºŒ 
 		if(nx >= n || nx < 0 || ny >= m || ny < 0 || grid[nx][ny] == 0 || vis[nx][ny]) 
 			continue;
 			
-		sum += DFS(nx, ny); // ¦b¤@¶ô¥Ğ¤º§ä¨ì©Ò¦³¤g¦aªºªÎ¨U«×¦b¬Û¥[ 
+		sum += DFS(nx, ny); // åœ¨ä¸€å¡Šç”°å…§æ‰¾åˆ°æ‰€æœ‰åœŸåœ°çš„è‚¥æ²ƒåº¦åœ¨ç›¸åŠ  
 			
 	}
 	
@@ -33,7 +35,7 @@ int DFS(int x, int y){
 int main(){
 	int i=0, j=0, cnt=0, maxsum=0;
 	
-	cin >> m >> n ; // N*M ºô®æ M¦æ¡A¨C¦æ¦³N­Ó
+	cin >> m >> n ; // N*M ç¶²æ ¼ Mè¡Œï¼Œæ¯è¡Œæœ‰Nå€‹
 				    // 3 2
 				    // 0 0 2
 				    // 0 3 5
@@ -45,14 +47,14 @@ int main(){
 	}
 	
  
-	memset(vis, 0, sizeof vis); // ªì©l¤Æ 
+	memset(vis, 0, sizeof vis); // åˆå§‹åŒ– 
 	
 	for(i=0; i<n; i++){
 		for(j=0; j<m; j++){
-		// ©|¥¼«ô³Xªº¹A¥Ğ	
+		// å°šæœªæ‹œè¨ªçš„è¾²ç”°	
 			if(grid[i][j] != 0 && !vis[i][j]){
 				cnt++;
-				maxsum = max(DFS(i, j), maxsum); // §ä³Ì¤jªÎ¨U«× 
+				maxsum = max(DFS(i, j), maxsum); // æ‰¾æœ€å¤§è‚¥æ²ƒåº¦ 
 			} 
 		}
 	}
