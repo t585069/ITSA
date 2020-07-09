@@ -2,6 +2,8 @@
 #include <stdlib.h> 
 using namespace std;
 
+// åœ“æ¡Œå ±æ•¸éŠæˆ²
+
 struct node{
 	
 	int num;
@@ -32,7 +34,7 @@ struct node *CreatNode(int n){
 		
 	}
 	
-	curNode->next = Head; // ­º§À¬Û³s 
+	curNode->next = Head; // é¦–å°¾ç›¸é€£ 
 
 	
 	return Head;
@@ -67,7 +69,7 @@ int main(){
 			j=0;
 			while(j != cnt){
 				
-			// ©|¥¼¥X§½	
+			// å°šæœªå‡ºå±€	
 				if(curNode->vis != 1)
 					j++;
 					
@@ -82,11 +84,11 @@ int main(){
 				cout<< curNode->num << endl;
 			else{
 				cout<< curNode->num << " ";
-				curNode->vis = 1; // ¥X§½ 
+				curNode->vis = 1; // å‡ºå±€ 
 				
-				curNode = curNode->next; // ¥X§½ªÌ¤U¤@¤H¶}©l ¥B ©|¥¼¥X§½ 
+				curNode = curNode->next; // å‡ºå±€è€…ä¸‹ä¸€äººé–‹å§‹ ä¸” å°šæœªå‡ºå±€ 
 				while(curNode->vis != 0)
-					curNode = curNode->next; // ­Y¤w¥X§½¦b§ä¤U¤@­Ó 
+					curNode = curNode->next; // è‹¥å·²å‡ºå±€åœ¨æ‰¾ä¸‹ä¸€å€‹ 
 							
 			}	
 		}		
