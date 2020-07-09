@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+// 求最大質數
+	
 int main(){
 	int i=0, j=0, num=0;
 
