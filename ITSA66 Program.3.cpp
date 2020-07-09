@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+// 字串切割
+
 int main(){
 	int i=0, j=0, n=0;
 	string str;
