@@ -2,6 +2,8 @@
 #include <limits.h>
 using namespace std;
 
+// å°‹æ‰¾æœ€å¤§å€é–“
+
 int main(){
 	int i=0, j=0, k=0, n=0, len=0;
 	
@@ -15,17 +17,17 @@ int main(){
 		for(j=0; j<len; j++)
 			cin >> profit[j] ;
 		
-		int max = INT_MIN, sum=0; // INT_MIN¡Gint ªº ³Ì¤p­È	
+		int max = INT_MIN, sum=0; // INT_MINï¼šint çš„ æœ€å°å€¼	
 		for(j=0; j<len; j++){
 			
 			sum = profit[j] + sum;
 			
 			
 			if(sum > max)
-				max = sum; // §ó·s max profit 
+				max = sum; // æ›´æ–° max profit 
 			
 			if(sum < 0) 
-				sum = 0; // ¥u­n¬O­tªºÂk 0 ­«·s²Ö¿n 
+				sum = 0; // åªè¦æ˜¯è² çš„æ­¸ 0 é‡æ–°ç´¯ç© 
 
 		}
 		
