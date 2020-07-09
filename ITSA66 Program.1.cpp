@@ -4,6 +4,8 @@
 #include <math.h>
 using namespace std;
 
+// éåŠå…ƒç´ 
+
 int main(){
 	int i=0, j=0, len=0;
 	string str;
@@ -11,14 +13,14 @@ int main(){
 	
 	while(getline(cin, str)){
 			
-	// ­pºâ ¼Æ¦r­Ó¼Æ
+	// è¨ˆç®— æ•¸å­—å€‹æ•¸
 		len = 1; 
 		for(i=0; i<str.size(); i++){
 			if(str[i] == ' ' || str[i] == '\t')
 				len++;	
 		}
 	
-	// ³B²z¦r¦ê¡A±N ¦r¤¸ Âà¦¨ ¼Æ¦r 	
+	// è™•ç†å­—ä¸²ï¼Œå°‡ å­—å…ƒ è½‰æˆ æ•¸å­— 	
 		int num[len];
 		bool sign_flag = 1; 
 		
@@ -30,9 +32,9 @@ int main(){
 			if(str[i] >= '0' && str[i] <= '9'){
 				
 				if(sign_flag == 1)
-					num[j] = 10*num[j] + (str[i] - 48); // ¥¿¼Æ 
+					num[j] = 10*num[j] + (str[i] - 48); // æ­£æ•¸ 
 				else
-					num[j] = 10*num[j] + (-1)*(str[i] - 48); // ­t¼Æ 
+					num[j] = 10*num[j] + (-1)*(str[i] - 48); // è² æ•¸ 
 					
 			}else if(str[i] == ' ' || str[i] == '\t'){
 				
@@ -44,7 +46,7 @@ int main(){
 		}	
 		
 		
-		sort(num, num+len); // ±Æ¦C¥Ñ¤p¦Ü¤j 
+		sort(num, num+len); // æ’åˆ—ç”±å°è‡³å¤§ 
 		
 		int ncnt[len], hlen=0;
 		bool half_flag = 0;
@@ -57,7 +59,7 @@ int main(){
 			if(num[i] == num[i-1])
 				ncnt[j]++;
 			
-		// ¶W¹L¥b¼Æ		
+		// è¶…éåŠæ•¸		
 			if(ncnt[j] == hlen){
 				cout<< num[i] << endl;
 				half_flag = 1;
@@ -75,7 +77,7 @@ int main(){
 		if(len == 1)
 			cout<< num[0] << endl;
 		else if(!half_flag)
-			cout<< "NO" << endl; // ¨S¦³¶W¹L¥b¼Æ
+			cout<< "NO" << endl; // æ²’æœ‰è¶…éåŠæ•¸
 		
 			
 	}
