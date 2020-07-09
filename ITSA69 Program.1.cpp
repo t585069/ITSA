@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+// èº«åˆ†è­‰é©—è­‰
+
 int main(){
 	int i=0, n=0;
 	string str;
@@ -92,15 +94,14 @@ int main(){
 		        break;
 		}
 		
-		x1 = numL / 10; // ¤Q¦ì¼Æ
-		x2 = numL - 10*x1; // ­Ó¦ì¼Æ
+		x1 = numL / 10; // åä½æ•¸
+		x2 = numL - 10*x1; // å€‹ä½æ•¸
 
 		
 		int p=0;
 		
 		p = x1 + (9*x2) + (8*(str[1]-48)) + (7*(str[2]-48)) + (6*(str[3]-48)) 
 				+ (5*(str[4]-48)) + (4*(str[5]-48)) + (3*(str[6]-48)) + (2*(str[7]-48)) + (str[8]-48) + (str[9]-48);
-//		cout<<" p = " << p << endl;
 			
 		if(p % 10 == 0)
 			cout<< "CORRECT!!!" <<endl;
