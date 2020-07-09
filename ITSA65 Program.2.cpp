@@ -3,6 +3,8 @@
 #include <iomanip>
 using namespace std;
 
+// 計算pi
+
 int main(){
 	int i=0, n=0;
 
