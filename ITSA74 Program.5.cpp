@@ -2,6 +2,7 @@
 #include <cstring>
 using namespace std;
 
+// æš—è™Ÿè½‰æ›
 
 int main(){
 	int n=0, i=0, j=0, k=0, num[50]={0}, len=0, ncnt=0, tcnt=0, pcnt=0;
@@ -15,12 +16,12 @@ int main(){
 	
 	
 	for(i=0; i<n; i++){
-	// ²M°£¼È¦s¥H¨¾ getline()±µ¸õ¹L
+	// æ¸…é™¤æš«å­˜ä»¥é˜² getline()æ¥è·³é
 		
-	// ¿é¤J¦r¦ê	
+	// è¼¸å…¥å­—ä¸²	
 		getline(cin, istr);
 		
-	// ³B²z¦r¦ê
+	// è™•ç†å­—ä¸²
 		len = istr.size();
 		tcnt = 0;
 		ncnt = 0;
