@@ -3,7 +3,7 @@
 #include <iomanip>
 using namespace std;
 
-// 未知數
+// 求未知數
 
 int main(){
 	int i=0, j=0, pos=0, cs_pos=0;
