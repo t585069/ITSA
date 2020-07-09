@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+// 狀態機
+
 int main(){
 	int i=0, j=0, n=0, pos=0;
 	string str;
