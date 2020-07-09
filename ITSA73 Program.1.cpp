@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+// å„ä½æ•¸å’Œçš„æ’åº
+
 int main(){
 	int i=0, j=0, n=0, tmp=0, f2i=0;
 	
@@ -10,21 +12,21 @@ int main(){
 	for (i = 0; i < n; i++){
 		cin >> data[i];
 		
-	// ­pºâ¦ì¼Æ¨Ã±N¦U¦ì¼Æ¬Û¥[	
+	// è¨ˆç®—ä½æ•¸ä¸¦å°‡å„ä½æ•¸ç›¸åŠ 	
 		f2i = data[i];
 		while(f2i != 0){
 			
 			tmp = f2i;
 			f2i /= 10;		
-			sum[i] = sum[i] + (tmp - 10*f2i); // ¨C¤@¦¸³£°O¿ı­Ó¦ì¼Æ 
+			sum[i] = sum[i] + (tmp - 10*f2i); // æ¯ä¸€æ¬¡éƒ½è¨˜éŒ„å€‹ä½æ•¸ 
 					
 		}
 	}
 	
-	// ±Æ§Ç
+	// æ’åº
 	for (i = 0; i < n-1; i++){
 		for (j = i+1; j < n; j++){	
-		// ¤ñ¦ì¼ÆÁ`©M 
+		// æ¯”ä½æ•¸ç¸½å’Œ 
 			if(sum[i] > sum[j]){
 				tmp = sum[i];
 				sum[i] = sum[j];
@@ -35,7 +37,7 @@ int main(){
 				data[j] = tmp;
 					
 			}else if(sum[i] == sum[j]){
-			// ¤ñ¼Æ¦r¤j¤p
+			// æ¯”æ•¸å­—å¤§å°
 				if(data[i] > data[j]){
 					tmp = data[i];
 					data[i] = data[j];
