@@ -1,20 +1,22 @@
 #include <iostream>
 using namespace std;
 
+// è¿‘ä¼¼å€¼
+
 int main(){
 	double i=0, n=0;
 	double x=0;
 	string str = "141592653589793238";
 	
 	cin >> n;
-	int ni; // ¿é¥Xªñ¦ü­È X ¤p¼ÆÂI«áªº²Ä ni ­Ó¼Æ¦r 
+	int ni; // è¼¸å‡ºè¿‘ä¼¼å€¼ X å°æ•¸é»å¾Œçš„ç¬¬ ni å€‹æ•¸å­— 
 	for(i=0; i<n; i++){
 		cin >> ni ;
 		cout<< str[ni-1] << endl;	
 	}
 
 /*	
-// X °µ	100000 ¦¸ªºªñ¦ü­È
+// X åš	100000 æ¬¡çš„è¿‘ä¼¼å€¼
  
 	double k = 1000000; 
 	for(i=0; i<k; i++){
