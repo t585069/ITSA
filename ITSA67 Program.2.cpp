@@ -2,18 +2,20 @@
 #include <cstring>
 using namespace std;
 
+// ç·šæ®µåˆ‡å‰²
+
 int main(){
 	int i=0, j=0, n=0;
 	
 	while(cin >> n){
 		
-		int lensum=0, cnt=0; // len¡G¥Ø«e±ý¤À³Îªº½u¬qªø«× 		
+		int lensum=0, cnt=0; // lenï¼šç›®å‰æ¬²åˆ†å‰²çš„ç·šæ®µé•·åº¦ 		
 		
-	// ±q½u¬qªø«× 1	©¹¤W¥[ 1 + 2 + 3 ...ª½¨ì Á`ªø«× lensum > n	
+	// å¾žç·šæ®µé•·åº¦ 1 å¾€ä¸ŠåŠ  1 + 2 + 3 ... ç›´åˆ° ç¸½é•·åº¦ lensum > n	
 		for(i=1; i<=n; i++){
 						
 			if(lensum + i > n)
-					break;
+				break;
 				
 			lensum += i;		
 			cnt++;	
