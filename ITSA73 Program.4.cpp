@@ -2,6 +2,8 @@
 #include <algorithm> 
 using namespace std;
 
+// å®¹å™¨é‡æ°´
+
 int main(){
 	int i=0, j=0, n=0, num=0, tgt=0, gcd=0;
 	
@@ -14,7 +16,7 @@ int main(){
 		for(j=0; j<num; j++)
 			cin >> cap[j];
 			
-	// ¥Î gcd ¨D©Ò¦³®e¾¹ªº³Ì¤j¤½¦]¼Æ¡A¥i¥H¾ã°£¥Nªí YES
+	// ç”¨ gcd æ±‚æ‰€æœ‰å®¹å™¨çš„æœ€å¤§å…¬å› æ•¸ï¼Œå¯ä»¥æ•´é™¤ä»£è¡¨ YES
 		gcd = cap[0];
 		for(j=1; j<num; j++){
 			
@@ -23,7 +25,7 @@ int main(){
 		} 	
 		
 		if(tgt % gcd == 0)
-			YN_flag[i] = 1; // ¥i¶q¥X¥Ø¼Ğ¤ô¶q 
+			YN_flag[i] = 1; // å¯é‡å‡ºç›®æ¨™æ°´é‡ 
 		
 	}
 	
