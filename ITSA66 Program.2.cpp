@@ -3,6 +3,8 @@
 #include <iomanip>
 using namespace std;
 
+// æœªçŸ¥æ•¸
+
 int main(){
 	int i=0, j=0, pos=0, cs_pos=0;
 	bool sign_flag = 1;
@@ -11,7 +13,7 @@ int main(){
 	
 	while(getline(cin, str)){
 		
-	// ³B²z¦r¦ê
+	// è™•ç†å­—ä¸²
 		memset(num, 0, sizeof num);
 		
 		j=0;
@@ -21,9 +23,9 @@ int main(){
 			if (str[i] >= '0' && str[i] <= '9'){
 				
 				if (sign_flag == 1)
-					num[j] = 10.0*num[j] + (str[i] - 48); // ¥¿¼Æ 
+					num[j] = 10.0*num[j] + (str[i] - 48); // æ­£æ•¸ 
 				else
-					num[j] = 10.0*num[j] + (-1)*(str[i] - 48); // ­t¼Æ 
+					num[j] = 10.0*num[j] + (-1)*(str[i] - 48); // è² æ•¸ 
 				
 				if(str[i+1] == ' ' || str[i+1] == '\t'){
 					j++;
@@ -34,9 +36,9 @@ int main(){
 			}else if (str[i] == '-' && (str[i+1] >= '0' && str[i+1] <= '9') )
 				sign_flag = 0; // 0 == '-', 1 == '+'
 			else if (str[i] == 'x')
-				pos = j; // x ªº¦ì¸m 
+				pos = j; // x çš„ä½ç½® 
 			else if (str[i] == '+' || str[i] == '-' || str[i] == '*' || str[i] == '/')
-				cs_pos = i; // ¨ú±o¹Bºâ²Å¸¹¦ì¸m		
+				cs_pos = i; // å–å¾—é‹ç®—ç¬¦è™Ÿä½ç½®		
 		}
 		
 //		cout<< "calculating signs : " << str[cs_pos] << endl;
