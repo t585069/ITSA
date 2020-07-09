@@ -3,23 +3,25 @@
 #include <iomanip>
 using namespace std;
 
+// å‚ç›´çš„æ™‚é‡åˆ†é‡
+
 int main(){
 	int i=0, st_h=0, ed_h=0, h=0, m=0;
 	double hh=0, mm=0, deg=0; 
 	
-	cin>>st_h>>ed_h; // ¶}©l®É¼Æ µ²§ô®É¼Æ 
+	cin>>st_h>>ed_h; // é–‹å§‹æ™‚æ•¸ çµæŸæ™‚æ•¸ 
 
 
-// ¥H 0 ÂI ¬° 0 «× ¡A 360«×/60min = 6 «×/min	
-// st_h ed_hÂà min¡A¨C¦¸ i++ ¥Nªí¹L¤F 1 min 
+// ä»¥ 0 é» ç‚º 0 åº¦ ï¼Œ 360åº¦/60min = 6 åº¦/min	
+// st_h ed_hè½‰ minï¼Œæ¯æ¬¡ i++ ä»£è¡¨éäº† 1 min 
 	for(i = st_h*60; i <= ed_h*60; i++){
 	
-	// ¥Ø«e¦ì¸m	
+	// ç›®å‰ä½ç½®	
 		h = (i/60)%12;
 		m = i%60;     
 		 
-		hh = h*30 + m*0.5; // ®É°w¨¤«× = (h+m/60)*30 «× 
-		mm = 6*m;         // ¤À°w¨¤«× = 6*m «×
+		hh = h*30 + m*0.5; // æ™‚é‡è§’åº¦ = (h+m/60)*30 åº¦ 
+		mm = 6*m;         // åˆ†é‡è§’åº¦ = 6*m åº¦
 		
 		
 		deg = fabs(hh - mm);
