@@ -3,8 +3,9 @@
 #include <math.h>
 using namespace std;
 
+// è²§å¯Œä¸å‡
 
-// Åı sort()¥Ñ¤j¨ì¤p 
+// è®“ sort()ç”±å¤§åˆ°å° 
 bool cmp(int a,int b){
     return a > b;
 }
@@ -22,15 +23,15 @@ int main(){
 		for(j=0; j<m; j++)
 			cin>>data[j];
 			
-	// ±Æ§Ç
+	// æ’åº
 		sort(data, data+m, cmp);
 		max = data[0];
-	// ­pºâÁ`µ|ª÷		
+	// è¨ˆç®—ç¸½ç¨…é‡‘		
 		for(j=0; j<m; j++){
 			if (data[j] == max){
 				
 				tax = ceil((double)data[j] * 0.4);
-				sum[i] += tax; // ³Ì¤jªºµ|ª÷ 40% 
+				sum[i] += tax; // æœ€å¤§çš„ç¨…é‡‘ 40% 
 				continue;
 				
 			}else if(data[j] == data[j-1]){
@@ -38,7 +39,7 @@ int main(){
 				continue;
 			}
 			
-			pct = ceil((double)j/m*100); // Âà double Åı¤p¼Æ¶i¦ì 
+			pct = ceil((double)j/m*100); // è½‰ double è®“å°æ•¸é€²ä½ 
 			if (pct <= 10)
 				tax = ceil((double)data[j] * 0.4);
 			else if (pct >= 11 && pct <= 30)
