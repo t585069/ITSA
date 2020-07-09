@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+// Pï¼šé€šéŽ  Mï¼šè£œè€ƒ  Fï¼šæ²’éŽ
+
 int main(){
 	int i=0, j=0, n=0;
 	
@@ -18,10 +20,10 @@ int main(){
 			cin >> point;
 			
 			if(point >= 60)
-				p_flag++; // ¤À¼Æ >= 60
+				p_flag++; // æˆç¸¾ >= 60
 				
 			if(point >= 80)	 
-				e_flag++; // ¤À¼Æ >= 80
+				e_flag++; // æˆç¸¾ >= 80
 			
 			sum += point;
 			
