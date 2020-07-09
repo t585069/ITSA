@@ -3,6 +3,8 @@
 #include <math.h>
 using namespace std;
 
+// 判斷迴文
+
 int main(){
 	int i=0, j=0, len=0, half=0;
 	string str;
