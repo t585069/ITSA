@@ -3,6 +3,8 @@
 #include <string.h> 
 using namespace std;
 
+// æ–‡å­—æ¥é¾
+
 int main(){
 	int i=0, j=0, k=0, n=0, cnt=0, tcnt=0;
 	string str;
@@ -13,7 +15,6 @@ int main(){
 		
 		cin >> str;
 		
-//		cout<< "str.size() = " << str.size() << endl;
 		char ans[1000], tmp[1000];
 		
 		memset(ans, 0, sizeof ans);
@@ -22,7 +23,6 @@ int main(){
 		for(j=0; j<str.size(); j++){
 			ans[j] = str[j];
 		}
-	//	cout<<endl; 	
 		
 		ans[j] = '\0';
 		
@@ -32,15 +32,15 @@ int main(){
 			 
 			switch(ans[j]){
 				case 'a': 		
-				// ¦r¦ê¤ÏÂà 
-				// ¨ú±o¤ÏÂà¦r¦ê	
+				// å­—ä¸²åè½‰ 
+				// å–å¾—åè½‰å­—ä¸²	
 					tcnt = 0; 
 					for(k=cnt-1; k>j; k--){
 						tmp[tcnt] = ans[k]; 
 						tcnt++;
 					}
 					
-				// ±q a ªº¤U¤@­Ó ¶}©l¨ú¥N
+				// å¾ a çš„ä¸‹ä¸€å€‹ é–‹å§‹å–ä»£
 					for(k=0; k<tcnt; k++){
 						ans[j + (k+1)] = tmp[k];  
 					}	
@@ -48,8 +48,8 @@ int main(){
 					break;
 				case 'b': 
 				
-				// ¦r¦ê½Æ»s¡A¨Ã±µ¤W­ì¦r¦ê
-				// ½Æ»s­ì¦r¦êªº ans[j+1] ~ ans[cnt-1] 	
+				// å­—ä¸²è¤‡è£½ï¼Œä¸¦æ¥ä¸ŠåŸå­—ä¸²
+				// è¤‡è£½åŸå­—ä¸²çš„ ans[j+1] ~ ans[cnt-1] 	
 					tcnt = cnt; 
 					for(k=j+1; k<tcnt; k++){
 						ans[cnt] = ans[k];
@@ -60,7 +60,7 @@ int main(){
 					break;
 				case 'c': 
 				
-				// c «á­±§R°£ 2 ­Ó¦r¤¸ 
+				// c å¾Œé¢åˆªé™¤ 2 å€‹å­—å…ƒ 
 					for(k=j+1; k<cnt-2; k++){
 						ans[k] = ans[k+2];
 					}
