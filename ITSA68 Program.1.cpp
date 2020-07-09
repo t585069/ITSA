@@ -2,6 +2,8 @@
 #include <cstring>
 using namespace std;
 
+// 計算字母出現次數
+
 int main(){
 	int i=0, j=0, letter[26][2], cnt=0;
 	string str;
