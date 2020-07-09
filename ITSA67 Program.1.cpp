@@ -2,6 +2,8 @@
 #include <cstring>
 using namespace std;
 
+// 18å•¦é»æ•¸è¨ˆç®—
+
 int main(){
 	int i=0, j=0, n[4], dice[6];
 	
@@ -38,22 +40,22 @@ int main(){
 				break;
 			}		
 				
-		// ­pºâ pair ¼Æ¶q
+		// è¨ˆç®— pair æ•¸é‡
 			if(dice[i] != 0){
 				if(dice[i] % 2 == 0){	
 					pair_max = (i+1) * 2;
 					pair_cnt++;	
 				}
 				
-				sum += (i+1) * dice[i]; // ­pºâÂI¼ÆÁ`©M 
+				sum += (i+1) * dice[i]; // è¨ˆç®—é»æ•¸ç¸½å’Œ 
 			}						
 		}
 		
 		if(exit_flag == 0){
 			if(pair_cnt == 2)
-				cout << pair_max << endl; // ¦³¨â¹ï¡A¿é¥X max pair
+				cout << pair_max << endl; // æœ‰å…©å°ï¼Œè¼¸å‡º max pair
 			else if(pair_cnt == 1)
-				cout<< sum - pair_max << endl; // ¥u¦³¤@¹ï¡Asum - pair
+				cout<< sum - pair_max << endl; // åªæœ‰ä¸€å°ï¼Œsum - pair
 			             	
 		}
 	}
