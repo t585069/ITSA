@@ -1,6 +1,8 @@
 #include <iostream>  
 using namespace std;  
-  
+ 
+// S(n) = S(n-1) + T(n-1) , n>1 
+
 int main(){  
     int i=0, j=0, n=0;  
       
@@ -12,17 +14,17 @@ int main(){
         t[1] = 2;  
         for(i=2; i<=n; i++){  
             s[i] = s[i-1] + t[i-1]; // S(n) = S(n-1) + T(n-1) , n>1  
-            t[i] = t[i-1] + 1; // T(n) ¬° S(n) ¤¤¤£¦s¦bªº¼Æ¦r   
+            t[i] = t[i-1] + 1; // T(n) ç‚º S(n) ä¸­ä¸å­˜åœ¨çš„æ•¸å­—   
               
             bool noNum_flag=1;  
-        // ÀË¬d¬O§_¬° S ¤¤ªº¼Æ¦r   
+        // æª¢æŸ¥æ˜¯å¦ç‚º S ä¸­çš„æ•¸å­—   
             while(noNum_flag){  
-            // §ä S(1) ~ S(n) ¦³¨S¦³  
+            // æ‰¾ S(1) ~ S(n) æœ‰æ²’æœ‰  
                 noNum_flag = 0;   
                 for(j=1; j<=i; j++){  
                       
                     if(t[i] == s[j]){  
-                        t[i]++; // ¬O S ¤¤ªº¼Æ¦r¡At[i]+1 Ä~Äò§ä S  
+                        t[i]++; // æ˜¯ S ä¸­çš„æ•¸å­—ï¼Œt[i]+1 ç¹¼çºŒæ‰¾ S  
                         noNum_flag = 1;  
                         break;  
                     }  
