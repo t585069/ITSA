@@ -2,6 +2,8 @@
 #include <cstring>
 using namespace std;
 
+// ç”·å¥³è¯èª¼
+
 int main(){
 	int i=0, j=0, k=0, n=0, m=0, len=0, sp_flag = 0;
 	string girl;
@@ -23,7 +25,7 @@ int main(){
 			
 			switch(m){
 				case 1:
-				// ¨S¿³½ìªºÃş§O 
+				// æ²’èˆˆè¶£çš„é¡åˆ¥ 
 					for(j=0; j<2; j++){
 						
 						cin >> type;
