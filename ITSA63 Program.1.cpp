@@ -2,6 +2,8 @@
 #include <string>
 using namespace std;
 
+// 星座查詢
+
 int main(){
 	int i=0, n=0;
 	char c[4];
