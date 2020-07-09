@@ -3,18 +3,20 @@
 #include <map>
 using namespace std;
 
+// è¥ªå­æˆå°
+
 int main(){
 	int n=0, i=0, j=0;
 	
-	cin>>n; // ¤À¦¨ n Ãş 
+	cin>>n; // åˆ†æˆ n é¡ 
 	
-	int m[n], cnt[n]={0}; // ¨C¤@Ãş¦³¦h¤Ö°¦Äû¤l 
+	int m[n], cnt[n]={0}; // æ¯ä¸€é¡æœ‰å¤šå°‘éš»è¥ªå­ 
 	for(i=0; i<n;i++)
 		cin>>m[i];
 	
 	for(i=0; i<n;i++){
-		map<string, int> mp; // Àx¦s ¦r¦ê ©M ¦r¦ê¼Æ¶q 
-		map<string, int>::iterator itmap; // ¥Î©ó·j´M²¾°Ê 
+		map<string, int> mp; // å„²å­˜ å­—ä¸² å’Œ å­—ä¸²æ•¸é‡ 
+		map<string, int>::iterator itmap; // ç”¨æ–¼æœå°‹ç§»å‹• 
 		string str;
 		
 		for(j=0; j<m[i]; j++){
@@ -23,7 +25,7 @@ int main(){
 		}
 		
 		for(itmap = mp.begin(); itmap != mp.end(); itmap++){
-		// ¸Ó¤ÀÃş¤¤¡AµLªk¦¨¹ïªºÄû¤l¦³´X°¦	
+		// è©²åˆ†é¡ä¸­ï¼Œç„¡æ³•æˆå°çš„è¥ªå­æœ‰å¹¾éš»	
 			if(itmap->second % 2 != 0)
 				cnt[i]++;
 		}
