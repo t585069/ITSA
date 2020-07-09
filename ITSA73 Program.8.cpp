@@ -2,6 +2,8 @@
 #include <math.h>
 using namespace std;
 
+// å¥½æ„Ÿåº¦é…å°
+
 int main(){
 	int i=0, j=0, k=0, n=0;
 	
@@ -15,13 +17,13 @@ int main(){
 		}
 	}
 	
-// ¶}©l°t¹ï	
+// é–‹å§‹é…å°	
 	k=n;
 	while(k--){
 		maxp[0] = 0;
 		for (i = 0; i < n; i++){
 			for (j = 0; j < n; j++){
-			// ¦n·P«×³Ì°ªªº²Õ¦X 
+			// å¥½æ„Ÿåº¦æœ€é«˜çš„çµ„åˆ 
 				if(p[i][j] > maxp[0] && !pairboy[i] && !pairgirl[j]){
 					maxp[0] = p[i][j];
 					maxp[1] = i;
@@ -31,11 +33,11 @@ int main(){
 			}
 		}
 	
-	// ¤w°t¹ï
+	// å·²é…å°
 		pairboy[maxp[1]] = 1;  
 		pairgirl[maxp[2]] = 1;
 	
-	// ²M°£¦n·P«×	
+	// æ¸…é™¤å¥½æ„Ÿåº¦	
 		p[maxp[1]][maxp[2]] = 0;
 				
 		cout << "boy " << maxp[1]+1 << " pair with girl " << maxp[2]+1 <<endl;	
