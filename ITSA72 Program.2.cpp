@@ -4,7 +4,7 @@
 #include <algorithm>
 using namespace std;
 
-
+// é™£åˆ—å…ƒç´ 
 
 int main(){
 	int i=0, len=0, tmp=0, arr_cnt=0;
@@ -12,11 +12,11 @@ int main(){
 	
 
 	getline(cin, str);
-	len = str.size(); // ªø«×
+	len = str.size(); // é•·åº¦
 
 	int arr[len]={0};
 
-// ¨ú¥X¦r¦ê¤¤ªº¼Æ¦r	
+// å–å‡ºå­—ä¸²ä¸­çš„æ•¸å­—	
 	for(i=0; i<len; i++){
 
 
@@ -26,7 +26,7 @@ int main(){
 				tmp = str[i] - 48;
 				
 			}else if(str[i+1] != ' ' || str[i+1] != '\t' || str[i+1] != '\n' || str[i+1] != '\0'){
-			// ¤U¤@­Ó¬O¼Æ¦r 
+			// ä¸‹ä¸€å€‹æ˜¯æ•¸å­— 
 				tmp = tmp*10 + (str[i]-48);
 				continue;
 			}
@@ -39,9 +39,9 @@ int main(){
 				
 	}
 
-	sort(arr, arr+arr_cnt); // ¥Ñ¤p¨ì¤j 
+	sort(arr, arr+arr_cnt); // ç”±å°åˆ°å¤§ 
 	int num[arr_cnt]={0}, numlen[arr_cnt]={0}, cnt=0;
-// °O¿ı ¼Æ¦r »P ­Ó¼Æ	
+// è¨˜éŒ„ æ•¸å­— èˆ‡ å€‹æ•¸	
 
 	for(i=0; i<arr_cnt; i++){
 
