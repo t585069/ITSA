@@ -2,16 +2,18 @@
 #include <cstring>
 using namespace std;
 
+// è³ªæ•¸åˆ¤åˆ¥
+
 int main(){
 	int i=0, n=0, len=0, tmp=0;
-	bool flag=1; // ¹w³]¬O½è¼Æ 
+	bool flag=1; // é è¨­æ˜¯è³ªæ•¸ 
 	string str;
 		
 	while(cin >> str){
 		if(str == "\0" || str == "\n")
 			break;
 		
-	// ³B²z¦r¦ê	
+	// è™•ç†å­—ä¸²	
 		len = str.size();
 		tmp = 0;
 		for(i=0; i<len; i++){
@@ -21,10 +23,10 @@ int main(){
 		}
 			
 		n = tmp;
-		flag=1; // ¹w³]¬O½è¼Æ 
+		flag=1; // é è¨­æ˜¯è³ªæ•¸ 
 		for(i=2; i<n; i++){		
 			if(n % i == 0){ 
-				flag = 0; // §ä¨ì¦]¼Æ 			
+				flag = 0; // æ‰¾åˆ°å› æ•¸ 			
 				break;			
 			}	
 		}
