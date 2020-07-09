@@ -2,14 +2,16 @@
 #include <cstring>
 using namespace std;
 
+// æ­£æ•´æ•¸åˆ†è§£
+
 int num[20], cnt=0;
 
-// n¡G¥Ø«e¥¿¦b¤À¸Ñªº¼Æ¦r
-// m¡G¦ì¸m  
+// nï¼šç›®å‰æ­£åœ¨åˆ†è§£çš„æ•¸å­—
+// mï¼šä½ç½®  
 void Divide(int n, int m){
 	int i=0;
 	
-// ¨ì©³	
+// åˆ°åº•	
 	if(n == 1){
     
 	    cnt++;
@@ -17,14 +19,14 @@ void Divide(int n, int m){
 	}
 	
 	for(i=n-1; i>=1; i--){	
-	// °_ÂI ©Î ¤À¥X¥hªº¼Æ¦r 
+	// èµ·é» æˆ– åˆ†å‡ºå»çš„æ•¸å­— 
 		if(m == 0 || i <= num[m-1]){
 			
-			num[m] = i; // ¨ú±o­n¤À¸Ñªº¼Æ¦r
-			Divide(n-i, m+1); // ±q¤p¤À¸Ñ¨ì¤j 6 = 5 1
-							  //                    1 -> cnt++ 
+			num[m] = i; // å–å¾—è¦åˆ†è§£çš„æ•¸å­—
+			Divide(n-i, m+1); // å¾å°åˆ†è§£åˆ°å¤§ 6 = 5 1
+							  //                  1 -> cnt++ 
 							  //                  5 -> 3 2 
-							  //                         2 -> 1 -> cnt++
+							  //                       2 -> 1 -> cnt++
 							  //                       3 -> 2 -> 1 -> cnt++							  		
 		}				
 	}	
@@ -36,10 +38,10 @@ int main(){
 	int i=0, n=0;
 	
 	while(cin >> n){
-		cnt =0; // ¹w³] 1 ºØ¬°¼Æ¦r¥»¨­ 
+		cnt =0; // é è¨­ 1 ç¨®ç‚ºæ•¸å­—æœ¬èº« 
 		memset(num, 0, sizeof num);
 		
-		Divide(n+1, 0); // ¨ì Divide()·|­×¥¿¦^ 6 
+		Divide(n+1, 0); // åˆ° Divide()æœƒä¿®æ­£å› 6 
 		
 		cout<< cnt << endl;
 	}
