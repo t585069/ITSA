@@ -1,21 +1,23 @@
 #include <iostream>
 using namespace std;
 
+// æœ€é•·ç›¸åŒæ•¸å­—é•·åº¦
+
 int main(){
 	int n=0, m=0, i=0, j=0, data[100]={0}, length[100]={0};
 	
-	cin>>n; // ¸ê®Æ¼Æ 
+	cin>>n; // è³‡æ–™æ•¸ 
 	int maxL[n] = {0};
 	
 	for(i=0; i<n; i++){
-		cin>>m; // ¼Æ¦r­Ó¼Æ
+		cin>>m; // æ•¸å­—å€‹æ•¸
 		
 		for(j=0; j<m; j++){
 			cin>>data[j];
-			length[data[j]] += 1; // ¸Ó¼Æ¦rªºªø«×+1 
+			length[data[j]] += 1; // è©²æ•¸å­—çš„é•·åº¦+1 
 			
 			if(length[data[j]] > maxL[i])
-				maxL[i] = length[data[j]];	// §ó·s³Ìªøªø«×		
+				maxL[i] = length[data[j]];	// æ›´æ–°æœ€é•·é•·åº¦		
 		}
 		
 		for(j=0; j<100; j++){
