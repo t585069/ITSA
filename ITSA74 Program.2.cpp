@@ -2,41 +2,43 @@
 #include <math.h>
 using namespace std;
 
+// å°„é£›é¢
+
 int main(){
 	double x=0, y=0, dis=0;
 	int n=0, i=0;
 	
-	cin>>n; // ¸ê®Æ¼Æ 
+	cin>>n; // è³‡æ–™æ•¸ 
 	int point[n];
 	
 	
 	for(i=0; i<n; i++){
-		cin>>x>>y; // ®g¤¤®y¼Ð 
+		cin>>x>>y; // å°„ä¸­åº§æ¨™ 
 		
 		dis = (10-x)*(10-x)+(10-y)*(10-y);
 		dis = sqrt(dis);
 		if (dis >= 0 && dis <= 1)
-			point[i] = 10; // ®g¤¤ A °Ï°ì
+			point[i] = 10; // å°„ä¸­ A å€åŸŸ
 		else if (dis > 1 && dis <= 2)
-			point[i] = 9; // ®g¤¤ B °Ï°ì
+			point[i] = 9; // å°„ä¸­ B å€åŸŸ
 		else if (dis > 2 && dis <= 3)
-			point[i] = 8; // ®g¤¤ C °Ï°ì
+			point[i] = 8; // å°„ä¸­ C å€åŸŸ
 		else if (dis > 3 && dis <= 4)
-			point[i] = 7; // ®g¤¤ D °Ï°ì
+			point[i] = 7; // å°„ä¸­ D å€åŸŸ
 		else if (dis > 4 && dis <= 5)
-			point[i] = 6; // ®g¤¤ E °Ï°ì
+			point[i] = 6; // å°„ä¸­ E å€åŸŸ
 		else if (dis > 5 && dis <= 6)
-			point[i] = 5; // ®g¤¤ F °Ï°ì
+			point[i] = 5; // å°„ä¸­ F å€åŸŸ
 		else if (dis > 6 && dis <= 7)
-			point[i] = 4; // ®g¤¤ G °Ï°ì
+			point[i] = 4; // å°„ä¸­ G å€åŸŸ
 		else if (dis > 7 && dis <= 8)
-			point[i] = 3; // ®g¤¤ H °Ï°ì
+			point[i] = 3; // å°„ä¸­ H å€åŸŸ
 		else if (dis > 8 && dis <= 9)
-			point[i] = 2; // ®g¤¤ I °Ï°ì
+			point[i] = 2; // å°„ä¸­ I å€åŸŸ
 		else if (dis > 9 && dis <= 10)
-			point[i] = 1; // ®g¤¤ J °Ï°ì
+			point[i] = 1; // å°„ä¸­ J å€åŸŸ
 		else
-			point[i] = 0; // ¶W¥X°Ï°ì 
+			point[i] = 0; // è¶…å‡ºå€åŸŸ 
 
 			
 	}
