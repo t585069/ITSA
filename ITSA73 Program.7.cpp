@@ -3,6 +3,8 @@
 #include <string.h>
 using namespace std;
 
+// è²“å’ªæ´»å‹•
+
 int grid[101][101]={0};
 bool vis[101][101]={0};
 const int dir[4][2] = {{1, 0}, {-1, 0}, {0, -1}, {0, 1}};
@@ -13,17 +15,17 @@ int DFS(int x, int y){
 	
 	vis[x][y] = 1;
 	
-// ÀË¬d¥|­Ó¤è¦V¬O§_¥i¥H¬¡°Ê
+// æª¢æŸ¥å››å€‹æ–¹å‘æ˜¯å¦å¯ä»¥æ´»å‹•
 	for(i = 0; i < 4; i++){
 		
 		nx = x + dir[i][0];
 		ny = y + dir[i][1];
 		
-	// «Dªk®y¼Ğ(¦Xªk¡G1 <= x,y <= edge) ©M ¤w«ô³X	
+	// éæ³•åº§æ¨™(åˆæ³•ï¼š1 <= x,y <= edge) å’Œ å·²æ‹œè¨ª	
 		if(nx < 1 || nx > edge || ny < 1 || ny > edge || vis[nx][ny])
 			continue;
 		
-		cnt += DFS(nx, ny); // Ä~Äò©µ¦ù	
+		cnt += DFS(nx, ny); // ç¹¼çºŒå»¶ä¼¸	
 				
 	}	
 	
@@ -40,17 +42,17 @@ int main(){
 	for(i = 0; i < n; i++){
 		cin >> edge >> obs;
 				
-	// ªì©l¤Æ			
+	// åˆå§‹åŒ–			
 		memset(grid, 0, sizeof grid);
 		memset(vis, 0, sizeof vis);
 		
 		int x=0, y=0;
 		for(j = 0; j < obs; j++){
-			cin >> x >> y; // »ÙÃªª«ªº®y¼Ğ 
+			cin >> x >> y; // éšœç¤™ç‰©çš„åº§æ¨™ 
 			
-			grid[x][y] = vis[x][y] = 1; // °O¿ı »ÙÃªª« ©M «ô³X
+			grid[x][y] = vis[x][y] = 1; // è¨˜éŒ„ éšœç¤™ç‰© å’Œ æ‹œè¨ª
 		}
-		cin >> x >> y; // MIMIªº®y¼Ğ
+		cin >> x >> y; // MIMIçš„åº§æ¨™
 		cnt[i] = DFS(x, y);
 		
 	}
