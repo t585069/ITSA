@@ -1,19 +1,19 @@
 #include <iostream>
 using namespace std;
 
-// ITSA74 Program.1
+// è¤‡åˆ©è¨ˆç®—
 
 int main(){
 	long double r=0, n=0, p=0, sum=0, interest=0;
 	long int i=0;
 	
-	cin>>r; // ¨C´Á§Q²v 
-	cin>>n; // ´Á¼Æ 
-	cin>>p; // ¨C´Á¥»ª÷ 
+	cin>>r; // æ¯æœŸåˆ©ç‡ 
+	cin>>n; // æœŸæ•¸ 
+	cin>>p; // æ¯æœŸæœ¬é‡‘ 
 
 	for(i=1; i<=n; i++){
-		interest = (sum+p) * r; // §Q®§	
-		sum = sum + p + interest; // ¥»§Q©M 
+		interest = (sum+p) * r; // åˆ©æ¯	
+		sum = sum + p + interest; // æœ¬åˆ©å’Œ 
 	}
 	cout<<(long long)sum<<endl;
 	 	
