@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+// 猜數字
+
 int main(){
 	int i=0, j=0, n=0, A=0, B=0;
 	string ans, str;
